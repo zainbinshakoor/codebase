@@ -15,6 +15,10 @@
 // var a = "hello" //string
 // var a = "20" //string
 // var a = 20 //number
+// document.write(a)
+// a = 10
+// b = 20;
+// document.write(b);
 // var a = true/false //boolean
 // var a = ["hello",20,['a']] //array
 // var obj = {name:'Husnain', age:25} //obj

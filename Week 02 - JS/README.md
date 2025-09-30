@@ -31,4 +31,13 @@
   - Logical & Comparison Operators
   - If, If Else, If Else If statement
 
+## Class 2: Basics Of JavaScript
+**Class:** <a href="https://www.youtube.com/live/gAf3c68gIHI?si=NpLnTYYdx5sMoke-">Link</a>
+
+- **Topic**: What is Functions?
+  - How to use Functions?
+- **Lab**: String & Number Methods
+  - Object & Array methods
+
+
 
