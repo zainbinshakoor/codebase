@@ -31,7 +31,7 @@
   - Logical & Comparison Operators
   - If, If Else, If Else If statement
 
-## Class 2: Basics Of JavaScript
+## Class 2: Javascript Methods
 **Class:** <a href="https://www.youtube.com/live/gAf3c68gIHI?si=NpLnTYYdx5sMoke-">Link</a>
 
 - **Topic**: What is Functions?
@@ -39,5 +39,14 @@
 - **Lab**: String & Number Methods
   - Object & Array methods
 
+## Class 3: Events Of JavaScript
+**Class:** <a href="https://www.youtube.com/live/ypBxDx7Wqlw?si=Avuoi2Jp2HUGoywk">Link</a>
+
+- **Topic**: What is Loops?
+  - How to use Switch-Case?
+  - What is events?
+- **Lab**: Object & Array advance methods
+  - onclick event
+  - get values from inputs
 
 

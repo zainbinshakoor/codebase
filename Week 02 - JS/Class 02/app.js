@@ -13,7 +13,7 @@
 // console.log(str.trim())
 // console.log(str.substring(5,11))
 // console.log(str.replaceAll("world","Hi"))
-// console.log(str.split("Hello"))
+// console.log(str.split(" "))
 
 // var num = 10.7
 
@@ -24,6 +24,7 @@
 
 // console.log(Math.round(num))
 // console.log(Math.ceil(num))
+// console.log(Math.floor(num))
 // console.log(Math.max(11,24,16,25,70))
 // console.log(Math.random())
 
@@ -36,12 +37,14 @@
 
 // delete person.country;
 
+// console.log(person)
+
 // var personCountry = { country: "Pakistan", state: "Punjab" };
 
 // console.log(Object.assign({},person,personCountry));
 
-var arr = ["apple", "pineapple", "strawberry", "mango"];
-// 0           1           2
+var arr = ["apple", "pineapple", "strawberry"];
+            // 0           1           2     
 
 // arr.push("mango");
 // arr.pop()
