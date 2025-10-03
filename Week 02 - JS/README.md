@@ -49,4 +49,15 @@
   - onclick event
   - get values from inputs
 
+## Class 4: ES6
+**Class:** <a href="https://www.facebook.com/share/v/1Jfe2RvLKS/">Link</a>
+
+- **Topic**: What is ES6?
+  - How to use Ternary Operators?
+  - What is Async/sync?
+- **Lab**: Let, Const & Arrow functions 
+  - Hoisting
+  - Spread Operator
+
+
 
