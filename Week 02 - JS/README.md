@@ -59,5 +59,11 @@
   - Hoisting
   - Spread Operator
 
+## Class 5: ES6
+**Class:** <a href="https://www.facebook.com/share/v/1Jfe2RvLKS/">Link</a>
 
+- **Topic**: What is deep copy or shallow copy?
+  - How to use ternary operator?
+  - What is pass by value and pass by refrence?
+  - How hoisting work in javascript?
 
