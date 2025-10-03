@@ -49,4 +49,9 @@
   - onclick event
   - get values from inputs
 
+## Class 5: ES6
+- **Topic**: What is deep copy or shallow copy?
+  - How to use ternary operator?
+  - What is pass by value and pass by refrence?
+  - How hoisting work in javascript?
 
