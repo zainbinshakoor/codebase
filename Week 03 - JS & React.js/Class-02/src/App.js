@@ -1,17 +1,34 @@
-// import logo from './logo.svg';
 import './App.css';
-import Mybutton from './Mybutton';
+import { useState } from 'react';
+import Welcome from './components/Welcome';
+const App = () => {
 
-function App() {
-  return (
+  const [increment, setIncrement] = useState(0);
+
+  const handleIncrease = () => {
+    setIncrement(increment + 1);
+  }
+
+  const reset = () => {
+    setIncrement(0);
+  }
+
+  const decrease = () => {
+    if(increment <= 0) return;
+    setIncrement(increment - 1);
+  }
+
+  return(
+    <>
+    {/* <Welcome name={name} age={age}/> */}
     <div className="App">
-      <Mybutton/>
-      <Mybutton/>
-      <Mybutton/>
-      <Mybutton/>
-      <Mybutton/>
+      <p>Count is {increment}</p>
+      <button onClick={handleIncrease}>Increase</button>
+      <button onClick={reset}>Reset</button>
+      <button onClick={decrease}>Decrease</button>
     </div>
-  );
+    </>
+  )
 }
 
 export default App;
