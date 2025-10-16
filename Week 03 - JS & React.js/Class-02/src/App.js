@@ -38,6 +38,8 @@ import { Navbar } from './components/Layout/Navbar';
 import { Home } from './pages/Home';
 import { ProductDetail } from './pages/ProductDetail';
 import { Contact } from './pages/Contact';
+import { CallBack } from './pages/CallBackPracitce';
+import { Memo } from './pages/Memo';
 export function App() {
   return (
     <>
@@ -48,6 +50,8 @@ export function App() {
         <Route path='/product/:productId' element={<ProductDetail/>}/>
         <Route path='/about' element={<h1>About Page</h1>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/callback' element={<CallBack/>}/> 
+        <Route path='/memo' element={<Memo/>}/>
         <Route path='*' element={<h1>404 Page Not Found</h1>}/>
       </Routes>
     </BrowserRouter>
