@@ -40,6 +40,7 @@ import { ProductDetail } from './pages/ProductDetail';
 import { Contact } from './pages/Contact';
 import { CallBack } from './pages/CallBackPracitce';
 import { Memo } from './pages/Memo';
+import { TodoApp } from './pages/TodoApp';
 export function App() {
   return (
     <>
@@ -52,6 +53,7 @@ export function App() {
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/callback' element={<CallBack/>}/> 
         <Route path='/memo' element={<Memo/>}/>
+        <Route path='/todo' element={<TodoApp/>}/>
         <Route path='*' element={<h1>404 Page Not Found</h1>}/>
       </Routes>
     </BrowserRouter>
