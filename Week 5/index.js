@@ -31,14 +31,15 @@ const express = require("express");
 
 const mongoose = require("mongoose");
 const User = require("./model/User");
+const Product = require("./model/Products");
+const Order = require("./model/Order");
 
 const app = express();
 
 app.use(express.json());
 
 mongoose
-  // .connect("mongodb://localhost:27017/icode")
-  "mongodb+srv://husnain:husnian@cluster0.e4xcc7x.mongodb.net/icode"
+  .connect("")
   .then(() => console.log("connected!"))
   .catch((err) => console.log(err));
 
@@ -60,6 +61,73 @@ app.put("/users/:id", async (req, res) => {
   });
 
   res.send(user);
+});
+
+// products
+app.post("/products", async (req, res) => {
+  const product = new Product(req.body);
+  await product.save();
+
+  res.send(product);
+});
+
+app.get("/products", async (req, res) => {
+  const products = await Product.find();
+  res.send(products);
+});
+
+//ordered products
+app.post("/order", async (req, res) => {
+  const order = new Order(req.body);
+  await order.save();
+
+  res.send(order);
+});
+
+app.get("/orders", async (req, res) => {
+  // const orders = await Order.find()
+  //   .populate("userId", "name email")
+  //   .populate("products.productId", "name price");
+
+    const orders = Order.aggregate([
+      {
+        $lookup: {
+          from: "users",
+          localField: "userId",
+          foreignField: "_id",
+          as: "user",
+        },
+      },
+      {
+        $unwind: "$user",
+      },
+      {
+        $lookup: {
+          from: "products",
+          localField: "products.productId",
+          foreignField: "_id",
+          as: "productDetails",
+        },
+      },
+      {
+        $project: {
+          totalAmount: 1,
+          orderDate: 1,
+          status: 1,
+          "user.name": 1,
+          "user.email": 1,
+          productDetails: 1,
+        },
+      },
+    ]).exec()
+  .then(orders => res.send(orders))
+  .catch(err => console.error(err));
+    
+});
+
+app.delete("/orders/:id", async (req, res) => {
+  const order = await Order.findByIdAndDelete(req.params.id);
+  res.send({ msg: "Order deleted", order });
 });
 
 app.listen(4000, () => console.log("App running!"));
